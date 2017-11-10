@@ -27,6 +27,19 @@ echo search::layout();
 
 if (isset($_REQUEST['search'])){
     foreach(search::searching($_REQUEST['search'], getcwd() . '/') as $hit){
-        echo '<a href="' . $hit . '">' . $hit . '</a><br>';
+        echo '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '">' . $hit . '</a><br>';
+    }
+}
+echo createHTML::highlight(reader::read());
+
+
+
+
+
+
+function OnSearch(){
+    if (isset($_REQUEST['search'])){
+        return '&search=' . $_REQUEST['search'];
+    }else{
     }
 }

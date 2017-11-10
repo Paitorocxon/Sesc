@@ -41,7 +41,6 @@ class search{
         if (isset($_REQUEST['search'])){
             return $_REQUEST['search'];
         } else {
-            return '';
         }
     }
 }

@@ -10,5 +10,8 @@
 
 
 class createHTML{
+    function highlight($text){
+            return $text;            
+    }
    
 }
