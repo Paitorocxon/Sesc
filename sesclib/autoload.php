@@ -12,17 +12,17 @@
 
 class init{
     function initialize(){
-       $modules = 0;
        foreach(scandir('sesclib/modules/') as $module){
             if($module !== '.' AND $module !== '..'){
                 include_once('sesclib/modules/' . $module);
-                $modules++;
             }
         }
-        return $modules;
     }
     
 }
+/* */
+include_once('gui.php');
+/* */
 
 
 

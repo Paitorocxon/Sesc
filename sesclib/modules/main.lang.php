@@ -14,6 +14,9 @@
     
     
     $LangSearch = '';
+    $LangUsername = '';
+    $LangPassword = '';
+    $LangLogin = '';
 if ($LANG == 'de') {
     german();
 } elseif ($LANG == 'en') {
@@ -23,7 +26,13 @@ if ($LANG == 'de') {
 
 function german(){
     $GLOBALS['LangSearch'] = 'Suchen';
+    $GLOBALS['LangUsername'] = 'Benutzername';
+    $GLOBALS['LangPassword'] = 'Passwort';
+    $GLOBALS['LangLogin'] = 'Einloggen';
 }
 function english(){
     $GLOBALS['LangSearch'] = 'Search';
+    $GLOBALS['LangUsername'] = 'Username';
+    $GLOBALS['LangPassword'] = 'Password';
+    $GLOBALS['LangLogin'] = 'Login';
 }

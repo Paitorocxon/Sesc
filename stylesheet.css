@@ -16,17 +16,85 @@ body{
     background-color:#FFFFEE;
     width: 98%;
     text-align: left;
-    padding-left: 10px;
     word-wrap: break-word;
     border: 1px solid lightgray;
     border-radius: 0px 0px 2px 2px;
     box-shadow: 0px 1px 3px 0px #BBBBBB;
-    padding-bottom: 8pt; 
+    position: absolute;
+    top:0pt;
+    left: 1%;
+    margin: auto;
+}
+#innermain{
+    padding-left: 10px;
 }
 #navi{
-    background-color: #000000;
+    background-color: #99EE99;
+    width: 100%;
+    color: #FFFFFF;
+    height: 60pt;
+    font-weight: bold;
+    overflow: auto;
+    padding-left: -10pt;
+    border: 0px solid #FFFFFF;
+    border-top: 8px solid #88DD88;
 }
-
+#right{
+    text-align: right;
+}
+h1 {
+    display:inline;
+    margin:0px;
+}
+#left{
+    text-align: left;
+}
+input[type=submit]{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#77CC77;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #88DD88;
+    border-left: 2px solid #88DD88;
+    border-right: 2px solid #66BB66;
+    border-bottom: 2px solid #66BB66;
+}
+input[type=file]{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#77CC77;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #88DD88;
+    border-left: 2px solid #88DD88;
+    border-right: 2px solid #66BB66;
+    border-bottom: 2px solid #66BB66;
+}
+input[type=text]{
+    color:#55AA55;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 160;
+}
+input[type=password]{
+    color:#55AA55;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 160;
+}
 #content{
     background-color:#FFFFFF;
     width: 96.7%;
