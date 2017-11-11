@@ -34,29 +34,35 @@ echo '<div id="left"><h1 style="color:#BBFFBB"><b>Sesc</b></h1>' . $requestStrin
 echo '<div id="right" style="padding-right: 6pt;">';
 echo search::layout();
 echo '</div></div>';
-echo '
-<form action="sesc.php" method="post" enctype="multipart/form-data">
-<input type="file" name="datei"><br>
-<input type="submit" value="Hochladen">
-</form>
-';
+
 
 upload::load();
  
 echo '<div id="innermain">';
 
+
+echo '<br>';
+
 if (isset($_REQUEST['search'])){
     echo '<div id="hits">';
         foreach(search::searching($_REQUEST['search'], getcwd() . '/') as $hit){
             if (!empty($hit)){
-                echo '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '">' . $hit . '</a><br>';
+                echo gui::buttons($hit,$_REQUEST['search']) . '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '#content">' . $hit . '</a><br>';
             }
         }
     echo '</div>';
 }
 
+if (isset($_REQUEST['m']) && isset($_REQUEST['action'])){
+    if (isset($_REQUEST['search'])){
+        echo reader::action($_REQUEST['action'], $_REQUEST['m'], $_REQUEST['search']);
+    }else{
+        echo reader::action($_REQUEST['action'], $_REQUEST['m'], "");
+    }
+}
+
 if (isset($_REQUEST['m'])){
-    echo '<div id="content">';
+    echo '<h3><a name="content">' . $_REQUEST['m'] . '</h3><div id="content">';
     echo createHTML::highlight(reader::read());
     echo '</div>';  
 }

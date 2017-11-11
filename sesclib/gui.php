@@ -15,5 +15,20 @@ class gui{
             '<input type="submit" value="' . $GLOBALS['LangLogin'] . '">'.
             '</form>';
         }
+        function buttons($file,$search){
+            return '
+            <a id="knoppdelete" href="sesc.php?m=' . $file . '&action=delete&search="' . $_REQUEST['search'] . '>Delete</a>' . 
+            '<a id="knoppread" href="sesc.php?m=' . $file . '&action=read&search="' . $search . '>Read</a>' . 
+            '<a id="knopp" href="sesc.php?m=' . $file . '&action=open&search="' . $search . '>Open</a>';
+        }
+        function functions($file){
+            return '
+            <a href="sesc.php?action=save&m="' . 
+            $file . 
+            '">' . 
+            $LangSave . 
+            '</a>'
+            ;
+        }
         
 }

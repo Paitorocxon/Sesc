@@ -39,6 +39,48 @@ body{
     border: 0px solid #FFFFFF;
     border-top: 8px solid #88DD88;
 }
+#knopp{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#77CC77;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #88DD88;
+    border-left: 2px solid #88DD88;
+    border-right: 2px solid #66BB66;
+    border-bottom: 2px solid #66BB66;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppdelete{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#CC7777;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #DD8888;
+    border-left: 2px solid #DD8888;
+    border-right: 2px solid #BB6666;
+    border-bottom: 2px solid #BB6666;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppread{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#DDCC77;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #EEDD88;
+    border-left: 2px solid #EEDD88;
+    border-right: 2px solid #CCBB66;
+    border-bottom: 2px solid #CCBB66;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
 #right{
     text-align: right;
 }
@@ -106,7 +148,6 @@ input[type=password]{
     border-radius: 4px 4px 4px 4px;
 }
 #hits a{
-    color: #5555FF;
     text-decoration: none;
     text-shadow: 1px 0px 1px #000000;
     font-weight: bold;

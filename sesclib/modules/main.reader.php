@@ -20,4 +20,23 @@ class reader{
         }else{
         }
     }
+    function action($action,$file,$search){
+        if (isset($action) && isset($file)){
+            if ($action == 'delete'){
+                return $GLOBALS['LangConfirm'] . $file . '<br>' .  
+                '<a id="knoppdelete" href="sesc.php?m=' . $file . '&action=confirm&search=' . $search . '">' . $GLOBALS['LangYes'] . '</a> ' .
+                '<a id="knopp" href="javascript:history.back()">' . $GLOBALS['LangNo'] . '</a>';
+            }elseif ($action == 'confirm'){
+                if ($file !== 'sesc.php' && $file !== 'stylesheet.css'){
+                unlink($file);
+                header('location: sesc.php?search=' . $search);
+                    
+                }else{
+                    return '<a id="knopp" href="javascript:history.back()"> <-- </a> <font color=red> ' . $GLOBALS['LangDeleteError'] . '</font>';
+                }
+            }elseif ($action == 'open'){
+                header('location: ' . $file);
+            }
+        }
+    }
 }
