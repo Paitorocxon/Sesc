@@ -23,12 +23,12 @@ class search{
             if($file !== '.' AND $file !== '..'){
                 if (file_exists($file)){
                     if (is_file($file)){
-                        if (strpos($file, $search)) {
-                            array_push ($SearchArray,$file);
-                            echo $file;
-                        }elseif (strpos(file_get_contents($file), $search)) {
-                            array_push ($SearchArray, $file);
-                            echo $dir  . $file;
+                        if (!empty($search)){
+                            if (strpos($file, $search)) {
+                                array_push ($SearchArray,$file);
+                            }elseif (strpos(file_get_contents($file), $search)) {
+                                array_push ($SearchArray, $file);
+                            }
                         }
                     }
 
@@ -41,7 +41,6 @@ class search{
         if (isset($_REQUEST['search'])){
             return $_REQUEST['search'];
         } else {
-            return '';
         }
     }
 }

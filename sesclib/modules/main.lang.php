@@ -18,7 +18,6 @@ if ($LANG == 'de') {
     german();
 } elseif ($LANG == 'en') {
     english();
-    
 }
 
 
