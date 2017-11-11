@@ -18,16 +18,14 @@ class search{
         '</form>';
     }
     function searching($search){
-        $SearchArray[] = '';
+        $SearchArray[] = NULL;
         foreach(scandir(getcwd()) as $file){
             if($file !== '.' AND $file !== '..'){
                 if (file_exists($file)){
                     if (is_file($file)){
                         if (!empty($search)){
-                            if (strpos($file, $search)) {
+                            if (strpos(strtolower($file), strtolower($search)) OR strpos(strtolower(file_get_contents($file)), strtolower($search))) {
                                 array_push ($SearchArray,$file);
-                            }elseif (strpos(file_get_contents($file), $search)) {
-                                array_push ($SearchArray, $file);
                             }
                         }
                     }

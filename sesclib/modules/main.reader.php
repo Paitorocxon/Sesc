@@ -27,7 +27,7 @@ class reader{
                 '<a id="knoppdelete" href="sesc.php?m=' . $file . '&action=confirm&search=' . $search . '">' . $GLOBALS['LangYes'] . '</a> ' .
                 '<a id="knopp" href="javascript:history.back()">' . $GLOBALS['LangNo'] . '</a>';
             }elseif ($action == 'confirm'){
-                if ($file !== 'sesc.php' && $file !== 'stylesheet.css'){
+                if ($file !== 'sesc.php' && $file !== 'stylesheet.css' && $file !== 'stylesheet.night.css'){
                 unlink($file);
                 header('location: sesc.php?search=' . $search);
                     

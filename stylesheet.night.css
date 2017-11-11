@@ -1,5 +1,6 @@
 body{
     font-family: Arial,serif;
+    background-color: #878787;
 }
 #hits{
 /*
@@ -13,14 +14,15 @@ body{
 */
 }
 #main{
-    background-color:#FFFFEE;
+    background-color:#0F0F0F;
     width: 98%;
     text-align: left;
     word-wrap: break-word;
-    border: 1px solid lightgray;
+    border: 1px solid transparent;
     border-radius: 0px 0px 2px 2px;
-    box-shadow: 0px 1px 3px 0px #BBBBBB;
+    box-shadow: 0px 1px 3px 0px #000000;
     position: absolute;
+    color: #FFFFFF;
     top:0pt;
     left: 1%;
     margin: auto;
@@ -30,7 +32,7 @@ body{
     padding-left: 10px;
 }
 #navi{
-    background-color: #99EE99;
+    background-color: #2F3660;
     width: 100%;
     color: #FFFFFF;
     height: 60pt;
@@ -38,9 +40,57 @@ body{
     overflow: auto;
     padding-left: -10pt;
     border: 0px solid #FFFFFF;
-    border-top: 8px solid #88DD88;
+    border-top: 8px solid #212744;
 }
 #knopp{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#334C00;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #3B5600;
+    border-left: 2px solid #3B5600;
+    border-right: 2px solid #223300;
+    border-bottom: 2px solid #223300;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppdelete{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#3D1C1C;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #632D2D;
+    border-left: 2px solid #632D2D;
+    border-right: 2px solid #3D2929;
+    border-bottom: 2px solid #3D2929;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppread{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#3F2B00;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #563900;
+    border-left: 2px solid #563900;
+    border-right: 2px solid #261A00;
+    border-bottom: 2px solid #261A00;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+
+
+
+
+
+
+#knopp:hover{
     color:#FFFFFF;
     text-decoration: none;
     background-color:#77CC77;
@@ -53,8 +103,9 @@ body{
     margin: 2pt;
     line-height: 20pt;
     letter-spacing: 2pt;
+    box-shadow: 0px 0px 10px #77CC77;
 }
-#knoppdelete{
+#knoppdelete:hover{
     color:#FFFFFF;
     text-decoration: none;
     background-color:#CC7777;
@@ -67,11 +118,9 @@ body{
     margin: 2pt;
     line-height: 20pt;
     letter-spacing: 2pt;
+    box-shadow: 0px 0px 10px #CC7777;
 }
-a{
-    color: #449944;
-}
-#knoppread{
+#knoppread:hover{
     color:#FFFFFF;
     text-decoration: none;
     background-color:#DDCC77;
@@ -84,7 +133,15 @@ a{
     margin: 2pt;
     line-height: 20pt;
     letter-spacing: 2pt;
+    box-shadow: 0px 0px 10px #DDCC77;
 }
+
+
+
+
+
+
+
 #right{
     text-align: right;
 }
@@ -98,18 +155,18 @@ h1 {
 input[type=submit]{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#77CC77;
+    background-color:#435189;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
-    border-top: 2px solid #88DD88;
-    border-left: 2px solid #88DD88;
-    border-right: 2px solid #66BB66;
-    border-bottom: 2px solid #66BB66;
+    border-top: 2px solid #495A96;
+    border-left: 2px solid #495A96;
+    border-right: 2px solid #212A44;
+    border-bottom: 2px solid #212A44;
 }
 input[type=file]{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#77CC77;
+    background-color:#435189;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
     border-top: 2px solid #88DD88;
@@ -117,16 +174,19 @@ input[type=file]{
     border-right: 2px solid #66BB66;
     border-bottom: 2px solid #66BB66;
 }
+a{
+    color: #FFFFFF;
+}
 input[type=text]{
-    color:#55AA55;
+    color:#FFFFFF;
     font-weight: bold;
     text-decoration: none;
-    background-color:#FFFFFF;
+    background-color:#435189;
     border: 1px solid white;
-    border-top: 2px solid #66BB66;
-    border-left: 2px solid #66BB66;
-    border-right: 2px solid #88DD88;
-    border-bottom: 2px solid #88DD88;
+    border-top: 2px solid #212A44;
+    border-left: 2px solid #212A44;
+    border-right: 2px solid #495A96;
+    border-bottom: 2px solid #495A96;
     width: 160;
 }
 input[type=password]{
@@ -142,13 +202,13 @@ input[type=password]{
     width: 160;
 }
 #content{
-    background-color:#FFFFFF;
+    background-color:#2F3660;
     width: 96.7%;
     text-align: left;
     padding-left: 1%; 
     padding-right: 1%; 
     word-wrap: break-word;
-    border: 1px solid lightgray;
+    border: 1px solid #000000;
     border-radius: 4px 4px 4px 4px;
 }
 #hits a{
