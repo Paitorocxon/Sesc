@@ -15,6 +15,8 @@
             echo help();
         }elseif ($page == 'about'){
             echo about();
+        }elseif ($page == 'create'){
+            echo create();
         }elseif ($page == 'control'){
             echo control();
         }else{
@@ -82,5 +84,8 @@
         return $GLOBALS['LangAboutText'];
     }
     function control(){
-        return 'control';
+        return $GLOBALS['LangControlText'];
+    }
+    function create(){
+        return $GLOBALS['LangControlText'];
     }

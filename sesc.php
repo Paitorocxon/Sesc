@@ -1,4 +1,4 @@
-﻿
+﻿<title>Sesc</title>
 <center>
 <link rel="stylesheet" href="stylesheet.css">
 <?php
@@ -17,7 +17,7 @@ include_once('sesclib/autoload.php');
 
 
 $releaseVersion = 1 ;
-$subVersion = 0 ;
+$subVersion = 1 ;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
@@ -67,17 +67,14 @@ function styleByTime(){
             ini_set("highlight.keyword", "#FF00BB; font-weight: bold");
             ini_set("highlight.string", "#808080");
             $GLOBALS['GlobalHeadColor'] = '#88DD88';
-
             return '<link rel="stylesheet" href="stylesheet.css">';
         }else{
-
             $GLOBALS['GlobalHeadColor'] = '#435189';
             ini_set("highlight.comment", "#55FF55; font-weight: bold");
             ini_set("highlight.html", "#FFFFFF");
             ini_set("highlight.keyword", "#FF5555; font-weight: bold");
             ini_set("highlight.string", "#FFFFFF");
             ini_set("highlight.default", "#00FFFF");
-
             return '<link rel="stylesheet" href="stylesheet.night.css">';
 
         }

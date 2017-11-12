@@ -7,7 +7,7 @@
 *   @version:   1.0
 *   
 */
-    $LANG = 'en';
+    $LANG = 'de';
     
     $LangSearch = '';
     $LangUsername = '';
@@ -26,6 +26,7 @@
     $LangAbout = '';
     $LangAboutText = '';
     $LangHelpText = '';
+    $LangControlText = '';
 if ($LANG == 'de') {
     german();
 } elseif ($LANG == 'en') {
@@ -55,7 +56,12 @@ function german(){
     '<br />' .
     'Copyright © 2017 Fabian Müller' . 
     '</div><br>';
-    $GLOBALS['LangHelpText'] = 'HILFE';
+    $GLOBALS['LangHelpText'] = '<div id="info"><h3>Hilfe</h3><br />' . 
+    'Suche:' . 
+    '<br />' . 
+    '' . 
+    '</div>';
+    $GLOBALS['LangControlText'] = '<div id="info"><h3>Steuerung</h3></div>';
 }
 function english(){
     $GLOBALS['LangSearch'] = 'Search';
@@ -80,4 +86,5 @@ function english(){
     'Copyright © 2017 Fabian Müller' . 
     '</div><br>';
     $GLOBALS['LangHelpText'] = 'HELP';
+    $GLOBALS['LangControlText'] = '<div id="info"><h3>Control</h3></div>';
 }
