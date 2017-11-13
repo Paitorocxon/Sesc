@@ -68,22 +68,36 @@ body{
     line-height: 20pt;
     letter-spacing: 2pt;
 }
+#knoppedit{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#77CCCC;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #99EEEE;
+    border-left: 2px solid #99EEEE;
+    border-right: 2px solid #55AAAA;
+    border-bottom: 2px solid #55AAAA;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
 a{
     color: #449944;
 }
 #addknopp{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#7777DD;
+    background-color:#77CCCC;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
-    border-top: 2px solid #9999FF;
-    border-left: 2px solid #9999FF;
-    border-right: 2px solid #5555BB;
-    border-bottom: 2px solid #5555BB;
+    border-top: 2px solid #99EEEE;
+    border-left: 2px solid #99EEEE;
+    border-right: 2px solid #55AAAA;
+    border-bottom: 2px solid #55AAAA;
     margin: 2pt;
     line-height: 20pt;
-    text-align: center;
+    letter-spacing: 2pt;
 }
 #knoppread{
     color:#FFFFFF;
@@ -195,6 +209,21 @@ input[type=password]{
     border-right: 2px solid #88DD88;
     border-bottom: 2px solid #88DD88;
     width: 160;
+}
+textarea {
+    color:#55AA55;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 99%;
+    height: 200pt;
+    max-width: 99%;
+    border-radius: 5px 5px 5px 5px;
 }
 #content{
     background-color:#FFFFFF;

@@ -71,12 +71,6 @@
         }else{
         }
     } 
-
-    
-    
-    
-    
-    
     function help(){
         return $GLOBALS['LangHelpText'];
     }

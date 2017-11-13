@@ -7,7 +7,7 @@
 *   @version:   1.0
 *   
 */
-    $LANG = 'de';
+    $LANG = 'en';
     
     $LangSearch = '';
     $LangUsername = '';
@@ -27,6 +27,8 @@
     $LangAboutText = '';
     $LangHelpText = '';
     $LangControlText = '';
+    $LangEdit = '';
+    $LangSave = '';
 if ($LANG == 'de') {
     german();
 } elseif ($LANG == 'en') {
@@ -50,6 +52,8 @@ function german(){
     $GLOBALS['LangRead'] = 'Lesen';
     $GLOBALS['LangOpen'] = 'Öffnen';
     $GLOBALS['LangAbout'] = 'Über';
+    $GLOBALS['LangEdit'] = 'Bearbeiten';
+    $GLOBALS['LangSave'] = 'Speichern';
     $GLOBALS['LangAboutText'] = '<div id="info"><h3>Sesc</h3> - <h5>Search \'n Script</h5><br>' . 
     'Version: ' . $GLOBALS['version'] . '<br />' .
     'Entwickler: Fabian Müller (Paitorocxon)' .
@@ -79,6 +83,8 @@ function english(){
     $GLOBALS['LangRead'] = 'Read';
     $GLOBALS['LangOpen'] = 'Open';
     $GLOBALS['LangAbout'] = 'About';
+    $GLOBALS['LangEdit'] = 'Edit';
+    $GLOBALS['LangSave'] = 'Save';
     $GLOBALS['LangAboutText'] = '<div id="info"><h3>Sesc</h3> - <h5>Search \'n Script</h5><br>' . 
     'Version: ' . $GLOBALS['version'] . '<br />' .
     'Developer: Fabian Müller (Paitorocxon)' .

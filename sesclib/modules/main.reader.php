@@ -36,6 +36,9 @@ class reader{
                 }
             }elseif ($action == 'open'){
                 header('location: ' . $file);
+            }elseif ($action == 'edit'){
+                echo writer::edit($file);
+                //header('location: sesc.php?m=' . $file . '&action=fileedit');
             }
         }
     }

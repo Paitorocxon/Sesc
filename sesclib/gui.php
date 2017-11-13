@@ -19,14 +19,15 @@ class gui{
             return '
             <a id="knoppdelete" href="sesc.php?m=' . $file . '&action=delete&search="' . $_REQUEST['search'] . '>' . $GLOBALS['LangDelete'] . '</a>' . 
             '<a id="knoppread" href="sesc.php?m=' . $file . '&action=read&search="' . $search . '>' . $GLOBALS['LangRead'] . '</a>' . 
-            '<a id="knopp" href="sesc.php?m=' . $file . '&action=open&search="' . $search . '>' . $GLOBALS['LangOpen'] . '</a>';
+            '<a id="knopp" href="sesc.php?m=' . $file . '&action=open&search="' . $search . '>' . $GLOBALS['LangOpen'] . '</a>' .
+            '<a id="knoppedit" href="sesc.php?m=' . $file . '&action=edit">' . $GLOBALS['LangEdit'] . '</a>';
         }
         function functions($file){
             return '
             <a href="sesc.php?action=save&m="' . 
             $file . 
             '">' . 
-            $LangSave . 
+            $GLOBALS['LangSave'] . 
             '</a>'
             ;
         }

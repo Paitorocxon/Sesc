@@ -1,4 +1,5 @@
 ﻿<title>Sesc</title>
+test
 <center>
 <link rel="stylesheet" href="stylesheet.css">
 <?php
@@ -7,7 +8,7 @@
 *   @title:     Sesc
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   09th November 2017
-*   @version:   1.0 [Levita]
+*   @version:   1.2 [Levita]
 *   
 */
 
@@ -17,7 +18,7 @@ include_once('sesclib/autoload.php');
 
 
 $releaseVersion = 1 ;
-$subVersion = 1 ;
+$subVersion = 2 ;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
@@ -41,10 +42,13 @@ echo menu::navigation();
 echo '</div>';
 
 
-upload::load();
  
 echo '<div id="innermain">';
-
+$filo = '';
+if (isset($_REQUEST['m'])){
+    $filo = $_REQUEST['m'];
+}
+echo '<form><input type="submit" id="addknopp" value="+"> <input type="hidden" id="action" name="action" value="edit"><input type="text" id="m" name="m" value="' . $filo . '"></form>';
 
 echo '<br>';
 if(isset($_REQUEST['page'])){
@@ -54,8 +58,9 @@ if(isset($_REQUEST['page'])){
 }
 
 echo '<div id="foot"> Sesc © 2017 Fabian Müller</div>';
-
-
+if (isset($_REQUEST['m']) && isset($_REQUEST['edit'])){
+    creator::write($_REQUEST['m'], $_REQUEST['edit']);
+}
 
 function styleByTime(){
         date_default_timezone_set("Europe/Berlin");

@@ -12,11 +12,14 @@
 class writer{
     function edit($file){
         if (file_exists($file)){
-            return '<textarea id="edit">' .
+            return '<form><br><input type="submit" value="' . $GLOBALS['LangSave'] . '"><input type="hidden" name="m" id="m" value="' . $file . '"           >  <textarea id="edit"  name="edit">' .
             file_get_contents($file) . 
-            '</textarea>';
+            '</textarea></form>' . 
+            '<br>';
         }else{
-            return '<textarea id="edit"></textarea>';
+            return '<form><br><input type="submit" value="' . $GLOBALS['LangSave'] . '"><input type="hidden" name="m" id="m" value="' . $file . '"           >  <textarea id="edit"  name="edit">' .
+            '</textarea></form>' . 
+            '<br>';
         }
     }
 }

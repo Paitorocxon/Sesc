@@ -14,7 +14,6 @@ class menu{
         return '<a id="menuitem" href="sesc.php">' . $GLOBALS['LangStart'] . '</a>' .
         '<a id="menuitem" href="sesc.php?page=control">' . $GLOBALS['LangControl'] . '</a>' .
         '<a id="menuitem" href="sesc.php?page=help">' . $GLOBALS['LangHelp'] . '</a>' .
-        '<a id="menuitem" href="sesc.php?page=about">' . $GLOBALS['LangAbout'] . '</a> ' . 
-        '<a id="addknopp" href="sesc.php?page=create">' . ' + ' . '</a>';
+        '<a id="menuitem" href="sesc.php?page=about">' . $GLOBALS['LangAbout'] . '</a> ';
     }
 }
