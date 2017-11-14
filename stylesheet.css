@@ -88,16 +88,13 @@ a{
 #addknopp{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#77CCCC;
+    background-color:#77CC77;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
-    border-top: 2px solid #99EEEE;
-    border-left: 2px solid #99EEEE;
-    border-right: 2px solid #55AAAA;
-    border-bottom: 2px solid #55AAAA;
-    margin: 2pt;
-    line-height: 20pt;
-    letter-spacing: 2pt;
+    border-top: 2px solid #88DD88;
+    border-left: 2px solid #88DD88;
+    border-right: 2px solid #66BB66;
+    border-bottom: 2px solid #66BB66;
 }
 #knoppread{
     color:#FFFFFF;

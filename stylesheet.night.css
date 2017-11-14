@@ -175,30 +175,25 @@ body{
 #addknopp{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#227777;
+    background-color:#435189;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
-    border-top: 2px solid #449999;
-    border-left: 2px solid #449999;
-    border-right: 2px solid #005555;
-    border-bottom: 2px solid #005555;
-    margin: 2pt;
-    line-height: 20pt;
+    border-top: 2px solid #495A96;
+    border-left: 2px solid #495A96;
+    border-right: 2px solid #212A44;
+    border-bottom: 2px solid #212A44;
 }
 #addknopp:hover{
     color:#FFFFFF;
     text-decoration: none;
-    background-color:#77CCCC;
+    background-color:#435189;
     border-radius: 2px 2px 2px 2px;
     border: 1px solid white;
-    border-top: 2px solid #99EEEE;
-    border-left: 2px solid #99EEEE;
-    border-right: 2px solid #55AAAA;
-    border-bottom: 2px solid #55AAAA;
-    margin: 2pt;
-    line-height: 20pt;
-    letter-spacing: 2pt;
-    box-shadow: 0px 0px 10px #77CCCC;
+    border-top: 2px solid #495A96;
+    border-left: 2px solid #495A96;
+    border-right: 2px solid #212A44;
+    border-bottom: 2px solid #212A44;
+    box-shadow: 0px 0px 10px #435189;
 
 }
 

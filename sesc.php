@@ -1,5 +1,4 @@
 ﻿<title>Sesc</title>
-test
 <center>
 <link rel="stylesheet" href="stylesheet.css">
 <?php
@@ -57,7 +56,7 @@ if(isset($_REQUEST['page'])){
     page('start');   
 }
 
-echo '<div id="foot"> Sesc © 2017 Fabian Müller</div>';
+echo '<div id="foot">Sesc © 2017 Fabian Müller</div>';
 if (isset($_REQUEST['m']) && isset($_REQUEST['edit'])){
     creator::write($_REQUEST['m'], $_REQUEST['edit']);
 }
