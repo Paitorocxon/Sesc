@@ -1,4 +1,5 @@
 ﻿<title>Sesc</title>
+<link rel="shortcut icon" href="favicon.png" type="image/png" />
 <center>
 <link rel="stylesheet" href="stylesheet.css">
 <?php
@@ -7,17 +8,17 @@
 *   @title:     Sesc
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   09th November 2017
-*   @version:   1.2 [Levita]
+*   @version:   1.4 [Levita]
 *   
 */
 
-
+set_time_limit(0);
 include_once('sesclib/autoload.php');
 
 
 
 $releaseVersion = 1;
-$subVersion = 3;
+$subVersion = 4;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
@@ -59,7 +60,8 @@ if(isset($_REQUEST['page'])){
 
 echo '<div id="foot">Sesc © 2017 Fabian Müller</div>';
 if (isset($_REQUEST['m']) && isset($_REQUEST['edit'])){
-    creator::write($_REQUEST['m'], $_REQUEST['edit']);
+    $CREATOR = new creator();
+    $CREATOR->write($_REQUEST['m'], $_REQUEST['edit']);
 }
 
 function styleByTime(){

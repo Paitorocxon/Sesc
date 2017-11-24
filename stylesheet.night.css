@@ -83,6 +83,20 @@ body{
     margin: 2pt;
     line-height: 20pt;
 }
+#knoppdownload{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#220022;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #EE99EE;
+    border-left: 2px solid #EE99EE;
+    border-right: 2px solid #110011;
+    border-bottom: 2px solid #110011;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
 #knoppread{
     color:#FFFFFF;
     text-decoration: none;
@@ -97,8 +111,20 @@ body{
     line-height: 20pt;
     letter-spacing: 2pt;
 }
-
-
+#knoppdownload{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#882288;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #995599;
+    border-left: 2px solid #995599;
+    border-right: 2px solid #663366;
+    border-bottom: 2px solid #663366;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
 #knopp:hover{
     color:#FFFFFF;
     text-decoration: none;
@@ -143,6 +169,21 @@ body{
     line-height: 20pt;
     letter-spacing: 2pt;
     box-shadow: 0px 0px 10px #77CCCC;
+}
+#knoppdownload:hover{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#CC77CC;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #EE99EE;
+    border-left: 2px solid #EE99EE;
+    border-right: 2px solid #AA55AA;
+    border-bottom: 2px solid #AA55AA;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+    box-shadow: 0px 0px 10px #CC77CC;
 }
 #knoppread:hover{
     color:#FFFFFF;

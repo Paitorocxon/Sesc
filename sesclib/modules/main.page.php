@@ -4,7 +4,7 @@
 *   @title:     main.page
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   12th November 2017
-*   @version:   1.0
+*   @version:   1.5
 *   
 */
 
@@ -21,6 +21,13 @@
         }elseif ($page == 'control'){
             echo control();
         }else{
+               if (isset($_REQUEST['download'])){
+
+                    header("Content-disposition: attachment; filename=" . urlencode($_REQUEST['download']) . "");
+                    header("Content-type: plain/text");
+                    readfile($_REQUEST['download']);
+                   
+                }
         if (isset($_REQUEST['search'])){
             $LOG = new log();
             $LOG->write('Search "' . $_REQUEST['search'] . '"');
@@ -59,6 +66,7 @@
                 }else{
                     echo $READER->action($_REQUEST['action'], $_REQUEST['m'], ".");
                 }
+             
             }
 
             if (isset($_REQUEST['m'])){

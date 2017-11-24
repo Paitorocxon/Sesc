@@ -82,6 +82,20 @@ body{
     line-height: 20pt;
     letter-spacing: 2pt;
 }
+#knoppdownload{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#CC77CC;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #EE99EE;
+    border-left: 2px solid #EE99EE;
+    border-right: 2px solid #AA55AA;
+    border-bottom: 2px solid #AA55AA;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
 a{
     color: #449944;
 }

@@ -24,18 +24,25 @@ class reader{
         if (isset($_REQUEST['m'])){
             if (file_exists($_REQUEST['m'])){
                 if ($READERz->endswith($_REQUEST['m'], ".mp3")){
-                    return "NOT ABLE TO READ!";
+                    echo '<audio controls><source src="' . $_REQUEST['m'] . '"></audio>';
+                    return "";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".mp4")){
-                    return "NOT ABLE TO READ!";
+                    echo '<video width="400" height="295" controls><source src="' . $_REQUEST['m'] . '"></video>';
+                    return "";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".wav")){
-                    return "NOT ABLE TO READ!";
+                    echo '<audio controls><source src="' . $_REQUEST['m'] . '"></audio>';
+                    return "";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".bmp")){
-                    return "NOT ABLE TO READ!";
+                    echo '<img src="' . $_REQUEST['m'] . '" width="200">';
+                    return "";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".png")){
-                    return "NOT ABLE TO READ!";
+                    echo '<img src="' . $_REQUEST['m'] . '" width="200">';
+                    return "";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".jpeg")){
+                    echo '<img src="' . $_REQUEST['m'] . '" width="200">';
                     return "NOT ABLE TO READ!";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".jpg")){
+                    echo '<img src="' . $_REQUEST['m'] . '" width="200">';
                     return "NOT ABLE TO READ!";
                 } elseif ($READERz->endswith($_REQUEST['m'], ".zip")){
                     return "NOT ABLE TO READ!";
