@@ -24,8 +24,12 @@ class search{
                 if (file_exists($file)){
                     if (is_file($file)){
                         if (!empty($search)){
-                            if (strpos(strtolower($file), strtolower($search)) OR strpos(strtolower(file_get_contents($file)), strtolower($search))) {
+                            if ($search == '%' OR $search == 'gimme all the damn files' OR $search == '') {
                                 array_push ($SearchArray,$file);
+                            } else {
+                                if (strpos(strtolower($file), strtolower($search)) OR strpos(strtolower(file_get_contents($file)), strtolower($search))) {
+                                    array_push ($SearchArray,$file);
+                                }
                             }
                         }
                     }

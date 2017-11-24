@@ -16,8 +16,8 @@ include_once('sesclib/autoload.php');
 
 
 
-$releaseVersion = 1 ;
-$subVersion = 2 ;
+$releaseVersion = 1;
+$subVersion = 3;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
@@ -29,15 +29,16 @@ if (isset($_REQUEST['m'])){
 }
 
 /*  */$version = $releaseVersion . "." . $subVersion . " " . $versionTitle;/*  */
-
-echo init::initialize();
+$INIT = new init();
+echo $INIT->initialize();
 echo '<div id="main"><div id="navi">';
 echo '<div id="left"><h1 style="color:' . $GlobalHeadColor . '"><b>Sesc</b></h1>' . $requestString . '</div>';
 echo '<div id="right" style="padding-right: 6pt;">';
-echo search::layout();
+$SEARCH = new search();
+echo $SEARCH->layout();
 echo '</div>';
-
-echo menu::navigation();
+$MENU = new menu();
+echo $MENU->navigation();
 echo '</div>';
 
 
@@ -84,11 +85,6 @@ function styleByTime(){
         }
         
     }
-
-
-
-
-
 
 ?>
 </div>
