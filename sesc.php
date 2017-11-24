@@ -1,7 +1,6 @@
 ﻿<title>Sesc</title>
 <link rel="shortcut icon" href="favicon.png" type="image/png" />
 <center>
-<link rel="stylesheet" href="stylesheet.css">
 <?php
 /**
 *

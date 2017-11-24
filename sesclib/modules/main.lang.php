@@ -7,7 +7,7 @@
 *   @version:   1.3
 *   
 */
-    $LANG = 'de';
+    $LANG = 'en';
     
     $LangSearch = '';
     $LangUsername = '';

@@ -102,7 +102,8 @@
     function control(){
         $LOG = new log();
             $LOG->write('[CONTROL]');
-        return $GLOBALS['LangControlText'];
+
+        return '<iframe src="http://' . $_SERVER['HTTP_HOST'] . '/pse.ui.php" width="98%" height="800px" style="border: 0px;"></iframe> ';
     }
     
     function create(){
