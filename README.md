@@ -1,20 +1,13 @@
 # Sesc
-
-
-
-Normal/ Daytime mode
-![alt text](https://raw.githubusercontent.com/Paitorocxon/Sesc/master/normal.png)
-
-
-Dark/ Night mode
-![alt text](https://raw.githubusercontent.com/Paitorocxon/Sesc/master/nightmode.png)
+Sesc - Search 'n Script
+~Inovation is where the ideas begin.
 
 ##  Changing the  Language
 
 #### head to the modules folder and open the module 'main.lang.php'
 Path:
 ###### 'sesclib/modules/main.lang.php'
-
+AVAILABLE LANGUAGES: ENGLISH|GERMAN
 Change the $LANG variable to your country short.
 German=de
 English=en
