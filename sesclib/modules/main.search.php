@@ -27,8 +27,10 @@ class search{
                             if ($search == '%' OR $search == 'gimme all the damn files' OR $search == '') {
                                 array_push ($SearchArray,$file);
                             } else {
-                                if (strpos(strtolower($file), strtolower($search)) OR strpos(strtolower(file_get_contents($file)), strtolower($search))) {
+                                if (strpos(strtolower('_' . $file), strtolower(trim($search)))) {
                                     array_push ($SearchArray,$file);
+                                } elseif (strpos(strtolower('_' . file_get_contents($file)), strtolower(trim($search)))){
+                                    array_push ($SearchArray,$file);  
                                 }
                             }
                         }

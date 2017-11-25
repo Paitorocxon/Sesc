@@ -83,11 +83,14 @@ class reader{
                     return '<a id="knopp" href="javascript:history.back()"> <-- </a> <font color=red> ' . $GLOBALS['LangDeleteError'] . '</font>';
                 }
             }elseif ($action == 'open'){
-                log::write('Open:' . $file);
+                $LOG = new log();
+                $LOG->write('Open:' . $file);
                 header('location: ' . $file);
             }elseif ($action == 'edit'){
-                log::write('Edit:' . $file);
-                echo writer::edit($file);
+                $LOG = new log();
+                $WRITER = new writer();
+                $LOG->write('Edit:' . $file);
+                echo $WRITER->edit($file);
                 //header('location: sesc.php?m=' . $file . '&action=fileedit');
             }
         }

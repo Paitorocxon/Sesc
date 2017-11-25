@@ -10,17 +10,23 @@
 *   @version:   1.4 [Levita]
 *   
 */
-
+session_start();
 set_time_limit(0);
 include_once('sesclib/autoload.php');
 
 
 
 $releaseVersion = 1;
-$subVersion = 4;
+$subVersion = 6;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
+$SEARCHED = '';
+if (isset($_REQUEST['search'])){
+    $SEARCHED = $_REQUEST['search'];
+}else{
+    $SEARCHED = '';
+}
 
 if (isset($_REQUEST['m'])){
     $requestString = '/' . $_REQUEST['m']; 

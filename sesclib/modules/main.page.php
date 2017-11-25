@@ -41,7 +41,7 @@
                     foreach($SEARCH->searching($_REQUEST['search'], getcwd() . '/') as $hit){
                         if (!empty($hit)){
                             $guibuttons = new gui();
-                            echo $guibuttons->buttons($hit,$_REQUEST['search']) . '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '#content">' . $hit . '</a><br>';
+                            echo $guibuttons->buttons($hit,$_REQUEST['search']) . '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '">' . $hit . '</a><br>';
                         }
                     }
                 echo '</div>';            
@@ -52,7 +52,7 @@
                 $GUI = new gui();
                     foreach($SEARCH->searching($_REQUEST['search'], getcwd() . '/') as $hit){
                         if (!empty($hit)){
-                            echo $GUI->buttons($hit,$_REQUEST['search']) . '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '#content">' . $hit . '</a><br>';
+                            echo $GUI->buttons($hit,$_REQUEST['search']) . '<a href="sesc.php' . "?m=" . $hit . OnSearch() . '">' . $hit . '</a><br>';
                         }
                     }
                 echo '</div>';
@@ -81,8 +81,8 @@
     
     function OnSearch(){
         $LOG = new log();
-        if (isset($_REQUEST['search'])){
-            return '&search=' . $_REQUEST['search'];
+        if (isset($GLOBALS['SEARCHED'])){
+            return '&search=' . $GLOBALS['SEARCHED'];
         }else{
         }
     } 
@@ -102,8 +102,8 @@
     function control(){
         $LOG = new log();
             $LOG->write('[CONTROL]');
-
-        return '<iframe src="http://' . $_SERVER['HTTP_HOST'] . '/pse.ui.php" width="98%" height="800px" style="border: 0px;"></iframe> ';
+        $CONTROL = new control();
+        return $CONTROL->ui();
     }
     
     function create(){
