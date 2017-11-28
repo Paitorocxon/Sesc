@@ -38,14 +38,14 @@ if (isset($_REQUEST['m'])){
 $INIT = new init();
 echo $INIT->initialize();
 echo '<div id="main"><div id="navi">';
-echo '<div id="left"><h1 style="color:' . $GlobalHeadColor . '"><b>Sesc</b></h1>' . $requestString . '</div>';
+echo '<div id="left"><div id="heading"><b>Sesc</b></div>' . $requestString . '</div>';
 echo '<div id="right" style="padding-right: 6pt;">';
 $SEARCH = new search();
 echo $SEARCH->layout();
 echo '</div>';
 $MENU = new menu();
 echo $MENU->navigation();
-echo '</div>';
+echo '</div><div id="light"></div>';
 
 
  
