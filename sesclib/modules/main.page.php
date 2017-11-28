@@ -103,6 +103,12 @@
         $LOG = new log();
             $LOG->write('[CONTROL]');
         $CONTROL = new control();
+        echo '	
+			 <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?action=upload" method="post">
+			 File: <input type="file" name="uploadfile" size="60" maxlength="255">
+			 <input type="Submit" name="Submit" value="Upload">
+			 </form>
+			 ';
         return $CONTROL->ui();
     }
     

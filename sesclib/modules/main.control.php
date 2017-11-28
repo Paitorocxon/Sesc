@@ -9,7 +9,8 @@
 */
 class control{
     function ui(){
-        echo "Tach!";
+			$UPLOAD = new upload();
+			echo $UPLOAD->upload();
         return "Hey :D!";
     }
 }

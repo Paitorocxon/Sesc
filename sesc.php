@@ -17,7 +17,7 @@ include_once('sesclib/autoload.php');
 
 
 $releaseVersion = 1;
-$subVersion = 6;
+$subVersion = 8;
 $versionTitle = "[Levita]";
 $GlobalHeadColor = '';
 echo styleByTime();
