@@ -85,7 +85,7 @@ class reader{
             }elseif ($action == 'open'){
                 $LOG = new log();
                 $LOG->write('Open:' . $file);
-                header('location: ' . $file);
+               header('location: ' . $file);
             }elseif ($action == 'edit'){
                 $LOG = new log();
                 $WRITER = new writer();

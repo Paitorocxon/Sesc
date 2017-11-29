@@ -1,4 +1,10 @@
 <?php
+
+	/**
+	*	.
+	*	.
+	*	.
+	*/
 class upload{
 	function upload(){
 			//Change the $foldername value!
@@ -39,7 +45,6 @@ class upload{
 					}
 				}elseif(($_GET['action'])==('upload')){
 					if (empty($_GET['uploadfile'])){
-			 
 						move_uploaded_file (
 							$_FILES['uploadfile']['tmp_name'] ,
 							$foldername . '/'. $_FILES['uploadfile']['name'] );
@@ -55,9 +60,8 @@ class upload{
 					echo "<h1>Connected to " . $foldername . "</h1>";
 					foreach($files as $file) {
 						if(($file)==(".")){
-								
+
 						}elseif(($file)==("..")){
-							
 						}elseif(($file)==(".htaccess")){
 
 						}else{
@@ -70,15 +74,14 @@ class upload{
 					echo "<font color=red><b><h1>" . $foldername . " was not found!</h1></b></font>";
 				}else{
 					$files = scandir($foldername);
-				
-						$ImageTypes = array(
+					$ImageTypes = array(
 						'png',
 						'jpg',
 						'jpeg',
 						'gif');
 				foreach($files as $file) {
 						$Source = $foldername . "/" . $file;
-			-            $EXCE = strtolower(pathinfo($Source, PATHINFO_EXTENSION));   
+			-            $EXCE = strtolower(pathinfo($Source, PATHINFO_EXTENSION));
 						if (in_array($EXCE,$ImageTypes)) {
 						}
 				}
@@ -86,9 +89,7 @@ class upload{
 					foreach($files as $file) {
 
 						if(($file)==(".")){
-							
 						}elseif(($file)==("..")){
-						
 						}elseif(($file)==(".htaccess")){
 
 						}else{
