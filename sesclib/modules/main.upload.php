@@ -25,13 +25,11 @@ class upload{
 			{
 			  $length = strlen($needle);
 			  if ($length == 0) {
-			  return true;
-			}
+				return true;
+			  }
 
 			  return (substr($haystack, -$length) === $needle);
 			}
-
-
 			//###################################################################################>
 			if (isset($_GET['action']) && !empty($_GET['action'])){
 				if (($_GET['action'])==('delete')){
@@ -39,17 +37,17 @@ class upload{
 						if(file_exists($foldername . "/" . $_GET['filename'])){
 							unlink($foldername . "/" . $_GET['filename']);
 							//echo '<script type="text/javascript">alert("Deleted!")</script>';
-							echo '<meta http-equiv="refresh" content="0; URL=upload.php">';
+							echo '<meta http-equiv="refresh" content="0; URL=sesc.php">';
 							die();
 						}
 					}
-				}elseif(($_GET['action'])==('upload')){
+				}elseif(($_GET['action'])==trim(('upload'))){
 					if (empty($_GET['uploadfile'])){
 						move_uploaded_file (
 							$_FILES['uploadfile']['tmp_name'] ,
 							$foldername . '/'. $_FILES['uploadfile']['name'] );
 
-						echo '<meta http-equiv="refresh" content="0; URL=upload.php>';
+						echo '<meta http-equiv="refresh" content="0; URL=sesc.php?page=control>';
 						die();
 					}
 				}
