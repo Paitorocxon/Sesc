@@ -10,8 +10,8 @@
 *   @version:   1.4 [Levita]
 *   
 */
-session_start();
-set_time_limit(0);
+//session_start();
+//set_time_limit(0);
 include_once('sesclib/autoload.php');
 
 

@@ -14,7 +14,7 @@ class upload{
 
 
 			//====================
-
+/*
 			function startsWith($haystack, $needle)
 			{
 			  $length = strlen($needle);
@@ -29,7 +29,7 @@ class upload{
 			  }
 
 			  return (substr($haystack, -$length) === $needle);
-			}
+			}*/
 			//###################################################################################>
 			if (isset($_GET['action']) && !empty($_GET['action'])){
 				if (($_GET['action'])==('delete')){

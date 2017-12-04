@@ -1,0 +1,3 @@
+put C:\notxampp\htdocs\sesc\sesclib\autoload.php
+put C:\notxampp\htdocs\sesc\sesclib\error.php
+put C:\notxampp\htdocs\sesc\sesclib\gui.php

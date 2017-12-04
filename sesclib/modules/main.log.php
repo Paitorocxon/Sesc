@@ -13,9 +13,11 @@
 
 class log{
     function write($text){
+        
+        $ip = getenv ("REMOTE_ADDR");
         if (file_exists('sesclog.log')){
             $text = file_get_contents('sesclog.log') . "\n" . str_pad(date('(z) [d.m.Y|H:i:s]'), 30, ' ', STR_PAD_RIGHT) .
-            str_pad($_SERVER["REMOTE_ADDR"], 15, ' ', STR_PAD_RIGHT) . "|" .
+            str_pad($ip, 15, ' ', STR_PAD_RIGHT) . "|" .
             str_pad($text, 80, ' ', STR_PAD_RIGHT) . "|";
         } else {
             $text = date('(z) d.m.y #') . $text;
