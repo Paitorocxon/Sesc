@@ -50,17 +50,24 @@ $SU_Password='';
 
 class logining{
     function isLoggedin(){
-        if (isset($_SESSION['username']) && isset($_SESSION['password'])){
-            logining::checklogin($_SESSION['username'],$_SESSION['password']);
-        } elseif (isset($_REQUEST['username']) && isset($_REQUEST['password'])){
-            logining::checklogin($_REQUEST['username'],$_REQUEST['password']);
+        if (isset($_REQUEST['logout'])){
+                logining::logout();
         } else {
-            logining::login();
+            
+            if (isset($_SESSION['username']) && isset($_SESSION['password'])){
+                logining::checklogin($_SESSION['username'],$_SESSION['password']);
+            } elseif (isset($_REQUEST['username']) && isset($_REQUEST['password'])){
+                logining::checklogin($_REQUEST['username'],$_REQUEST['password']);
+            } else {
+                logining::login();
+            }
+            
         }
             
     }
     function checklogin($name,$password){
-        if ($name == 'pait' && $password == 'germany1999'){
+        echo '"' . $name . '" "' . $password . '"' ;
+        if (trim($name) == 'pait' && trim($password) == 'germany1999'){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
         } else {
@@ -68,6 +75,18 @@ class logining{
         }
     }
     function login(){
+        $_SESSION = array();
+        $_SESSION['username'] = NULL;
+        $_SESSION['password'] = NULL;
+        
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
+        }
+        session_destroy();
                 die('<div id="draggable" class="ui-widget-content"><div id="navi_login">LOGIN</div><br>
                 <form action="">
                 Username<br><input type="text" name="username"><br><br>
@@ -78,5 +97,20 @@ class logining{
                 </form>
                 </div>'
                 );
+    }
+    function logout(){
+        $_SESSION = array();
+        $_SESSION['username'] = NULL;
+        $_SESSION['password'] = NULL;
+        
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
+        }
+        session_destroy();
+        die('<meta http-equiv="refresh" content="0; url=sesc.php" />');
     }
 }
