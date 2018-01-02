@@ -22,20 +22,14 @@
             echo control();
         }else{
                if (isset($_REQUEST['download'])){
-
                     header("Content-disposition: attachment; filename=" . urlencode($_REQUEST['download']) . "");
                     header("Content-type: plain/text");
                     readfile($_REQUEST['download']);
-                   
                 }
         if (isset($_REQUEST['search'])){
             $LOG = new log();
             $LOG->write('Search "' . $_REQUEST['search'] . '"');
             if (file_exists($_REQUEST['search'])){
-               /* if ($_REQUEST['search'] !== '.' AND $_REQUEST['search'] !== '..'){
-                    header('location: sesc.php?m=' . $_REQUEST['search'] . '&search=' . $_REQUEST['search']);
-                }else{
-                 */   
                 echo '<div id="hits">';
                 $SEARCH = new search();
                     foreach($SEARCH->searching($_REQUEST['search'], getcwd() . '/') as $hit){
@@ -102,14 +96,12 @@
     function control(){
         $LOG = new log();
             $LOG->write('[CONTROL]');
-        $CONTROL = new control();
         echo '	
 			 <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?page=control&action=upload" method="post">
 			 File: <input type="hidden" name="page" id="page" value="control"><input type="file" name="uploadfile" size="60" maxlength="255">
 			 <input type="Submit" name="Submit" value="Upload">
 			 </form>
 			 ';
-        return $CONTROL->ui();
     }
     
     function create(){

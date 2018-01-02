@@ -1,24 +1,29 @@
-﻿<title>Sesc</title>
+<?php 
+session_start([
+    'cookie_lifetime' => 86400,
+]);
+?>
+<title>Sesc</title>
 <link rel="shortcut icon" href="favicon.png" type="image/png" />
 <center>
 <?php
+
 /**
 *
 *   @title:     Sesc
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   09th November 2017
-*   @version:   1.4 [Levita]
+*   @version:   2.0 [Cactus] ಠᴗಠ"
 *   
 */
-//session_start();
-//set_time_limit(0);
+set_time_limit(0);
 include_once('sesclib/autoload.php');
 
 
 
-$releaseVersion = 1;
-$subVersion = 8;
-$versionTitle = "[Levita]";
+$releaseVersion = 2;
+$subVersion = 0;
+$versionTitle = "[Cactus] ಠᴗಠ ";
 $GlobalHeadColor = '';
 echo styleByTime();
 $SEARCHED = '';
@@ -36,7 +41,13 @@ if (isset($_REQUEST['m'])){
 
 /*  */$version = $releaseVersion . "." . $subVersion . " " . $versionTitle;/*  */
 $INIT = new init();
+
+
+
 echo $INIT->initialize();
+
+$Login = new logining();
+$Login->isLoggedin();
 echo '<div id="main"><div id="navi">';
 echo '<div id="left"><div id="heading"><b>Sesc</b></div>' . $requestString . '</div>';
 echo '<div id="right" style="padding-right: 6pt;">';
@@ -48,6 +59,10 @@ echo $MENU->navigation();
 echo '</div><div id="light"></div>';
 
 
+if (isset($_REQUEST['m']) && isset($_REQUEST['edit'])){
+    $CREATOR = new creator();
+    $CREATOR->write($_REQUEST['m'], $_REQUEST['edit']);
+}
  
 echo '<div id="innermain">';
 $filo = '';
@@ -64,10 +79,6 @@ if(isset($_REQUEST['page'])){
 }
 
 echo '<div id="foot">Sesc © 2017 Fabian Müller</div>';
-if (isset($_REQUEST['m']) && isset($_REQUEST['edit'])){
-    $CREATOR = new creator();
-    $CREATOR->write($_REQUEST['m'], $_REQUEST['edit']);
-}
 
 function styleByTime(){
         date_default_timezone_set("Europe/Berlin");
@@ -81,18 +92,14 @@ function styleByTime(){
             $GLOBALS['GlobalHeadColor'] = '#88DD88';
             return '<link rel="stylesheet" href="stylesheet.css">';
         }else{
-            $GLOBALS['GlobalHeadColor'] = '#435189';
-            ini_set("highlight.comment", "#55FF55; font-weight: bold");
-            ini_set("highlight.html", "#FFFFFF");
-            ini_set("highlight.keyword", "#FF5555; font-weight: bold");
-            ini_set("highlight.string", "#FFFFFF");
-            ini_set("highlight.default", "#00FFFF");
-            return '<link rel="stylesheet" href="stylesheet.night.css">';
-
+            ini_set("highlight.comment", "#008000; font-weight: bold");
+            ini_set("highlight.html", "#808080");
+            ini_set("highlight.keyword", "#FF00BB; font-weight: bold");
+            ini_set("highlight.string", "#808080");
+            $GLOBALS['GlobalHeadColor'] = '#88DD88';
+            return '<link rel="stylesheet" href="stylesheet.css">';
         }
-        
     }
-
 ?>
 </div>
 </div><br><br><br><br>

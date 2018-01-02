@@ -9,8 +9,3 @@
 */
 
 
-class style{
-    function detectove(){
-        if ()
-    }
-}

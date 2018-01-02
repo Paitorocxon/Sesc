@@ -13,6 +13,37 @@ body{
 */
 }
 
+
+li {
+    background-color:#FFFFDD;
+    
+}
+ul {
+    width: 15%;
+    list-style: none;
+	background-position: top;
+    border: 3px solid #88DD88;
+    border-top: 3px solid #99EE99;
+    border-bottom: 3px solid #44AA44;
+    border-left: 3px solid #44AA44;
+    padding-left: 0px;
+}
+.ui-menu-item-wrapper{
+	position: relative;
+    background-color:#FFFFDD;
+    }
+    
+.ui-menu-item-wrapper:hover{
+    cursor:pointer;
+	position: relative;
+    background-color:#99EE99;
+    list-style: none;
+	background-position: top;
+    border: 1px solid #88DD88;
+    border-top: 1px solid #99EE99;
+    border-bottom: 1px solid #44AA44;
+    border-left: 1px solid #44AA44;
+    }
 #main{
     background-color:#FFFFDD;
     width: 98%;
@@ -34,7 +65,7 @@ body{
     background-color: #99EE99;
     width: 100%;
     color: #FFFFFF;
-    height: 80pt;
+    height: 84pt;
     font-weight: bold;
     overflow: auto;
     padding-left: -10pt;

@@ -12,11 +12,14 @@
 
 class init{
     function initialize(){
+        $modules = NULL;
        foreach(scandir('sesclib/modules/') as $module){
             if($module !== '.' AND $module !== '..'){
                 include_once('sesclib/modules/' . $module);
+            $modules = $modules . $module . '\n';
             }
         }
+        //echo '<script>alert("' . $modules .'");</script>';
     }
     
 }

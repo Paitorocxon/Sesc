@@ -1,4 +1,30 @@
-﻿<?php
+﻿
+
+  <script src="jquery/jquery-1.12.4.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [<?php
+    foreach(scandir(getcwd()) as $file){
+            if($file !== '.' AND $file !== '..'){
+                if (file_exists($file)){
+                    if (is_file($file)){
+                        echo '"' . $file . '",' . "\n";
+                    }
+                }
+            }
+        }
+        echo '"%"';
+
+    ?>
+    ];
+    
+    $( "#search" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+<?php
 /**
 *
 *   @title:     main.search
