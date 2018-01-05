@@ -15,7 +15,7 @@ class errorhand{
             str_pad($errno . "|" . $errstr . " " . $errfile . " ", 145, ' ', STR_PAD_RIGHT) . str_pad($errline, 4, ' ', STR_PAD_RIGHT) . "|" . 
             "\n" . str_pad("=", 195, '=', STR_PAD_RIGHT)  ;
         } else {
-            $text = date('(z) d.m.y #') . $text;
+            $text = date('(z) d.m.y #') . $errno . ' ' . $errstr . ' ' . $errfile . ' ' . $errline;
         }
         $FILE = fopen('ERROR.log', 'w');
         fwrite($FILE, $text);

@@ -22,7 +22,7 @@ include_once('sesclib/autoload.php');
 
 
 $releaseVersion = 2;
-$subVersion = 0;
+$subVersion = 1;
 $versionTitle = "[Cactus] ಠᴗಠ ";
 $GlobalHeadColor = '';
 echo styleByTime();
@@ -39,6 +39,7 @@ if (isset($_REQUEST['m'])){
     $requestString = '';  
 }
 
+
 /*  */$version = $releaseVersion . "." . $subVersion . " " . $versionTitle;/*  */
 $INIT = new init();
 
@@ -46,10 +47,21 @@ $INIT = new init();
 
 echo $INIT->initialize();
 
+
+
+
+//Since here, everything should be initialized :D
+
+
+$upload = new uploading();
+$upload->uploadscript();
+
+
+
 $Login = new logining();
 $Login->isLoggedin();
 echo '<div id="main"><div id="navi">';
-echo '<div id="left"><div id="heading"><b>Sesc</b></div>' . $requestString . '</div>';
+echo '<div id="left"><div id="heading"><b>Sesc/</b></div>' . $_SESSION['dir'] . ' ' . $requestString . '</div>';
 echo '<div id="right" style="padding-right: 6pt;">';
 $SEARCH = new search();
 echo $SEARCH->layout();

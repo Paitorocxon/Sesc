@@ -19,7 +19,7 @@ class init{
             $modules = $modules . $module . '\n';
             }
         }
-        //echo '<script>alert("' . $modules .'");</script>';
+        #echo '<script>alert("' . $modules .'");</script>';
     }
     
 }

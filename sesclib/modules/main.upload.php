@@ -1,44 +1,20 @@
 <?php
 
-	/**
-	*	.
-	*	.
-	*	.
-	*/
-class upload{
-	function upload(){
+class uploading{
+	function uploadscript(){
 			//Change the $foldername value!
 			//====================
 			$password = "1134-g-2601";
 			$foldername = getcwd();
 
 
-			//====================
-/*
-			function startsWith($haystack, $needle)
-			{
-			  $length = strlen($needle);
-			  return (substr($haystack, 0, $length) === $needle);
-			}
-
-			function endsWith($haystack, $needle)
-			{
-			  $length = strlen($needle);
-			  if ($length == 0) {
-				return true;
-			  }
-
-			  return (substr($haystack, -$length) === $needle);
-			}*/
-			//###################################################################################>
 			if (isset($_GET['action']) && !empty($_GET['action'])){
 				if (($_GET['action'])==('delete')){
 					if (isset($_GET['filename']) && !empty($_GET['filename'])){
 						if(file_exists($foldername . "/" . $_GET['filename'])){
 							unlink($foldername . "/" . $_GET['filename']);
-							//echo '<script type="text/javascript">alert("Deleted!")</script>';
-							echo '<meta http-equiv="refresh" content="0; URL=sesc.php">';
-							die();
+							#echo '<script type="text/javascript">alert("Deleted!")</script>';
+							die('<meta http-equiv="refresh" content="0; URL=sesc.php">');
 						}
 					}
 				}elseif(($_GET['action'])==trim(('upload'))){
@@ -47,8 +23,8 @@ class upload{
 							$_FILES['uploadfile']['tmp_name'] ,
 							$foldername . '/'. $_FILES['uploadfile']['name'] );
 
-						echo '<meta http-equiv="refresh" content="0; URL=sesc.php?page=control>';
-						die();
+				
+						#die('<meta http-equiv="refresh" content="0; URL=sesc.php?page=control>');
 					}
 				}
 				if (!is_dir($foldername)){
@@ -79,7 +55,7 @@ class upload{
 						'gif');
 				foreach($files as $file) {
 						$Source = $foldername . "/" . $file;
-			-            $EXCE = strtolower(pathinfo($Source, PATHINFO_EXTENSION));
+			            $EXCE = strtolower(pathinfo($Source, PATHINFO_EXTENSION));
 						if (in_array($EXCE,$ImageTypes)) {
 						}
 				}

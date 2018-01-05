@@ -15,6 +15,6 @@ class menu{
         '<a id="menuitem" href="sesc.php?page=control">' . $GLOBALS['LangControl'] . '</a>' .
         '<a id="menuitem" href="sesc.php?page=help">' . $GLOBALS['LangHelp'] . '</a>' .
         '<a id="menuitem" href="sesc.php?page=about">' . $GLOBALS['LangAbout'] . '</a> ' .
-        '<a id="menuitem" href="sesc.php?logout=HURRY">' . 'Logout' . '</a> ';
+        '<a id="menuitem" href="sesc.php?logout=ByeBye">' . 'Logout' . '</a> ';
     }
 }

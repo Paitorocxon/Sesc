@@ -67,9 +67,11 @@ class logining{
     }
     function checklogin($name,$password){
         echo '"' . $name . '" "' . $password . '"' ;
-        if (trim($name) == 'pait' && trim($password) == 'germany1999'){
+        if (trim($name) == 'root' && trim($password) == 'root'){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
+            $_SESSION['dir'] = $_SESSION['dir'];
+            
         } else {
             logining::login();
         }
@@ -78,7 +80,6 @@ class logining{
         $_SESSION = array();
         $_SESSION['username'] = NULL;
         $_SESSION['password'] = NULL;
-        
         if (ini_get("session.use_cookies")) {
             $params = session_get_cookie_params();
             setcookie(session_name(), '', time() - 42000,
@@ -86,7 +87,7 @@ class logining{
                 $params["secure"], $params["httponly"]
             );
         }
-        session_destroy();
+        #session_destroy();
                 die('<div id="draggable" class="ui-widget-content"><div id="navi_login">LOGIN</div><br>
                 <form action="">
                 Username<br><input type="text" name="username"><br><br>
@@ -102,7 +103,6 @@ class logining{
         $_SESSION = array();
         $_SESSION['username'] = NULL;
         $_SESSION['password'] = NULL;
-        
         if (ini_get("session.use_cookies")) {
             $params = session_get_cookie_params();
             setcookie(session_name(), '', time() - 42000,
@@ -110,7 +110,7 @@ class logining{
                 $params["secure"], $params["httponly"]
             );
         }
-        session_destroy();
+        #session_destroy();
         die('<meta http-equiv="refresh" content="0; url=sesc.php" />');
     }
 }

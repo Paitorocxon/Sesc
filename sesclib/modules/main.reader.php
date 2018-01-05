@@ -77,8 +77,7 @@ class reader{
                     }
                     copy($file,"BACKUPS/" . $NEWFILE);
                     unlink($file);
-                    header('location: sesc.php?search=' . $search);
-                        
+                    //header('location: sesc.php?search=' . $search);
                 }else{
                     return '<a id="knopp" href="javascript:history.back()"> <-- </a> <font color=red> ' . $GLOBALS['LangDeleteError'] . '</font>';
                 }
@@ -91,7 +90,6 @@ class reader{
                 $WRITER = new writer();
                 $LOG->write('Edit:' . $file);
                 echo $WRITER->edit($file);
-                //header('location: sesc.php?m=' . $file . '&action=fileedit');
             }
         }
     }
