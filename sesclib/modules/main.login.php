@@ -66,8 +66,7 @@ class logining{
             
     }
     function checklogin($name,$password){
-        echo '"' . $name . '" "' . $password . '"' ;
-        if (trim($name) == 'root' && trim($password) == 'root'){
+        if (trim($name) == 'pait' && trim($password) == 'popelfresserfabianmueller12071999drachenpenis'){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
             $_SESSION['dir'] = $_SESSION['dir'];

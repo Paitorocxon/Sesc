@@ -18,7 +18,7 @@ class gui{
         function buttons($file,$search){
             return '
              <a title="' . $GLOBALS['LangDelete'] . '" id="knoppdelete" href="sesc.php?m=' . $file . '&action=delete&search=' . $GLOBALS['SEARCHED'] . '">' . $GLOBALS['LangDelete'] . '</a>' . 
-            '<a id="knoppread" href="sesc.php?m=' . $file . '&action=read&search=' . $GLOBALS['SEARCHED'] . '">' . $GLOBALS['LangRead'] . '</a>' . 
+            '<a id="knoppread" href="sesc.php?m=' . $file . '&action=read">' . $GLOBALS['LangRead'] . '</a>' . 
             '<a id="knopp" href="' . $file . '">' . $GLOBALS['LangOpen'] . '</a>' .
             '<a id="knoppedit" href="sesc.php?m=' . $file . '&action=edit">' . $GLOBALS['LangEdit'] . '</a>' .
             '<a id="knoppdownload" href="sesc.php?download=' . $file . '">' . $GLOBALS['LangDownload'] . '</a>';
