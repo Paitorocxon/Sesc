@@ -31,7 +31,7 @@
 *   @title:     main.creator
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   13th November 2017
-*   @version:   1.0
+*   @version:   1.2
 *   
 */
 
@@ -42,6 +42,7 @@ class creator{
             $writefile = fopen($file, "w") or die("Error");
             fwrite($writefile, $content);
             fclose($writefile);
+            die('<meta http-equiv="refresh" content="0; url=sesc.php?action=read&m=' . $file . '" />');
         }
     }
 }

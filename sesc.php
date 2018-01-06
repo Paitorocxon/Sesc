@@ -13,7 +13,7 @@ session_start([
 *   @title:     Sesc
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   09th November 2017
-*   @version:   2.0 [Cactus] ಠᴗಠ"
+*   @version:   2.2 [Cactus] ಠᴗಠ"
 *   
 */
 set_time_limit(0);

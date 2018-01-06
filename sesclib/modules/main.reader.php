@@ -77,7 +77,7 @@ class reader{
                     }
                     copy($file,"BACKUPS/" . $NEWFILE);
                     unlink($file);
-                    die('<meta http-equiv="refresh" content="0; url=sesc.php?search=' . $_REQUEST['search'] . '" />');
+                    //header('location: sesc.php?search=' . $search);
                 }else{
                     return '<a id="knopp" href="javascript:history.back()"> <-- </a> <font color=red> ' . $GLOBALS['LangDeleteError'] . '</font>';
                 }
