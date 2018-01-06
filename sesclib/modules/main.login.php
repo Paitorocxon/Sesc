@@ -66,11 +66,10 @@ class logining{
             
     }
     function checklogin($name,$password){
-        echo '"' . $name . '" "' . $password . '"' ;
         if (trim($name) == 'pait' && trim($password) == 'germany1999'){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
-            $_SESSION['dir'] = $_SESSION['dir'];
+            $_SESSION['dir'] = getcwd();
             
         } else {
             logining::login();
