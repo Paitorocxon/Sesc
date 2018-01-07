@@ -96,11 +96,15 @@
     function control(){
         $LOG = new log();
             $LOG->write('[CONTROL]');
-        echo '	
-			 <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?page=control&action=upload" method="post">
-			 File: <input type="hidden" name="page" id="page" value="control"><input type="file" name="uploadfile" size="60" maxlength="255">
-			 <input type="Submit" name="Submit" value="Upload">
-			 </form>
+        echo '
+            <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?page=control&action=upload" method="post">
+            <label id="uploadlabel" class="UPLOADLABEL">
+            <input type="file" required style="display:none" name="uploadfile"/>
+                <span>Browse ...</span>
+                <input type="hidden" name="page" id="page" value="control">
+                 </label>
+                 <input type="Submit" name="Submit" id="Upload" value="Upload">
+            </form>
 			 ';
     }
     
