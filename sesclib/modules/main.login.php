@@ -66,7 +66,7 @@ class logining{
             
     }
     function checklogin($name,$password){
-        if (trim($name) == 'pait' && trim($password) == 'germany1999'){
+        if (trim($name) == '' && trim($password) == ''){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
             $_SESSION['dir'] = getcwd();
@@ -88,7 +88,7 @@ class logining{
         }
         #session_destroy();
                 die('<div id="draggable" class="ui-widget-content"><div id="navi_login">LOGIN</div><br>
-                <form action="">
+                <form action=""  method="POST">
                 Username<br><input type="text" name="username"><br><br>
                 Password<br><input type="password" name="password"><br>
                 <br>

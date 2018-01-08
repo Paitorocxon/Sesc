@@ -13,7 +13,7 @@ session_start([
 *   @title:     Sesc
 *   @author:    Paitorocxon (Fabian Müller)
 *   @created:   09th November 2017
-*   @version:   2.2 [Cactus] ಠᴗಠ"
+*   @version:   2.4 ALPHA[Exponentia] ಠᴗಠ"
 *   
 */
 set_time_limit(0);
@@ -22,8 +22,8 @@ include_once('sesclib/autoload.php');
 
 
 $releaseVersion = 2;
-$subVersion = 1;
-$versionTitle = "[Cactus] ಠᴗಠ ";
+$subVersion = 4;
+$versionTitle = "<b>ALPHA</b> [Exponentia] ಠᴗಠ ";
 $GlobalHeadColor = '';
 echo styleByTime();
 $SEARCHED = '';
@@ -81,7 +81,25 @@ $filo = '';
 if (isset($_REQUEST['m'])){
     $filo = $_REQUEST['m'];
 }
-echo '<form><input type="submit" id="addknopp" value="+"> <input type="hidden" id="action" name="action" value="edit"><input type="text" id="m" name="m" value="' . $filo . '"></form>';
+
+if (isset($_REQUEST['typeof']) && $_REQUEST['typeof'] == 'HTML') {
+ 
+    echo '<form><input type="submit" id="addknopp" value="+"> <input type="hidden" id="action" name="action" value="edit"><input type="text" id="m" name="m" value="' . $filo . '">
+    <select name="typeof" id="typeof">
+    <option Value="Normal">Normal</option>
+    <option Value="HTML" Selected>&lt;HTML/&gt;</option>
+    </select>
+    </form>';
+   
+} else {
+    
+    echo '<form><input type="submit" id="addknopp" value="+"> <input type="hidden" id="action" name="action" value="edit"><input type="text" id="m" name="m" value="' . $filo . '">
+    <select name="typeof" id="typeof">
+    <option Value="Normal" Selected>Normal</option>
+    <option Value="HTML">&lt;HTML/&gt;</option>
+    </select>
+    </form>';
+}
 
 echo '<br>';
 if(isset($_REQUEST['page'])){
