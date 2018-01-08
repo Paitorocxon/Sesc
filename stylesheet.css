@@ -18,8 +18,9 @@ li {
     background-color:#FFFFDD;
     
 }
+.ui-helper-hidden-accessible { display:none; }
 ul {
-    width: 15%;
+    width: 160;
     list-style: none;
 	background-position: top;
     border: 3px solid #88DD88;
@@ -246,6 +247,7 @@ input[type=text]{
     border-bottom: 2px solid #88DD88;
     width: 160;
 }
+
 input[type=password]{
     color:#55AA55;
     font-weight: bold;
@@ -272,7 +274,67 @@ textarea {
     height: 200pt;
     max-width: 99%;
     border-radius: 5px 5px 5px 5px;
+    resize: vertical;
 }
+
+
+
+#uploadlabel {
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#DDCC77;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+    border-top: 2px solid #EEDD88;
+    border-left: 2px solid #EEDD88;
+    border-right: 2px solid #CCBB66;
+    border-bottom: 2px solid #CCBB66;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+
+
+
+
+
+
+#typeof {
+    color:#FFF;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#77CC77;
+    border: 1px solid white;
+    border-top: 2px solid #88DD88;
+    border-left: 2px solid #88DD88;
+    border-right: 2px solid #66BB66;
+    border-bottom: 2px solid #66BB66;
+}
+select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+   background-image: url(...);   /* add custom arrow */
+}
+
+#edit {
+    color:#55AA55;
+    font-weight: none;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 99%;
+    height: 200pt;
+    max-width: 99%;
+    overflow-y:scroll;
+    border-radius: 5px 5px 5px 5px;
+    resize: vertical;
+}
+
 #content{
     background-color:#FFFFFF;
     width: 96.7%;
