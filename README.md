@@ -5,14 +5,14 @@ Sesc - Search 'n Script
 Facebook: fb.me/paitoroc 
 
 ##  Installing Sesc
-You do NOT need any extra libs.
-Everything is in here.
- 1. Download Sesc
- 2. put "sesc.php" and "sesclib/" into your webfolder (e.g: "/var/www/html" for apache2)
- 3. Change the loginsettings (not the final login-module/secure one is comming soon!)
-    Open "sesclib/modules/main.login.php" and edit the password and username on line 71.
- 4. Open the browser of your choice and goto (he! he!) "http://localhost/sesc.php"
-    If you see the Sesc-Loginwindow everything is fine.
+███ ██ ███ ████ ███ █████ █████
+██████████ ██ ██ █████
+ 1. ████████ ████████
+ 2. ███ ██████████ ███ ██████████ ████ ████ █████████ █████ ███████████████ ███ ████████
+ 3. ██████ ███ ████████████ ████ ███ █████ ███████████████████ ███ ██ ██████ ██████
+    ████ ██████████████████████████████ ███ ████ ███ ████████ ███ ████████ ██ ████ ███
+ 4. ████ ███ ███████ ██ ████ ██████ ███ ████ ████ ████ ███████████████████████████
+    ██ ███ ███ ███ ████████████████ ██████████ ██ █████
     
     
 ## Troubleshooting
