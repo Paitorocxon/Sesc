@@ -7,9 +7,8 @@
 *   @version:   1.3
 *   
 */
-    $LANG = 'de';
+    $LANG = 'en';
     
-    $LangSearch = '';
     $LangUsername = '';
     $LangPassword = '';
     $LangLogin = '';
@@ -37,7 +36,6 @@ if ($LANG == 'de') {
 
 
 function german(){
-    $GLOBALS['LangSearch'] = 'Suchen';
     $GLOBALS['LangUsername'] = 'Benutzername';
     $GLOBALS['LangPassword'] = 'Passwort';
     $GLOBALS['LangLogin'] = 'Einloggen';
@@ -70,7 +68,6 @@ function german(){
     $GLOBALS['LangControlText'] = '<div id="info"><h3>Steuerung</h3></div>';
 }
 function english(){
-    $GLOBALS['LangSearch'] = 'Search';
     $GLOBALS['LangUsername'] = 'Username';
     $GLOBALS['LangPassword'] = 'Password';
     $GLOBALS['LangLogin'] = 'Login';

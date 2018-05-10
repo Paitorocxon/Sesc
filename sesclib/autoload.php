@@ -9,6 +9,12 @@
 */
 
 
+/* */
+include_once('settings.php');
+include_once('gui.php');
+include_once('error.php');
+set_error_handler("errorhand::ErrorHandler");
+/* */
 
 class init{
     function initialize(){
@@ -23,11 +29,6 @@ class init{
     }
     
 }
-/* */
-include_once('gui.php');
-include_once('error.php');
-set_error_handler("errorhand::ErrorHandler");
-/* */
 
 
 

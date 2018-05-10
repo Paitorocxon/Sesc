@@ -1,0 +1,278 @@
+body{
+    font-family: Consolas,serif;
+    background-color: #000000;
+}
+#hits{
+/*
+    background-color:#FFFFFF;
+    height: 90%;
+    width: 30%;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0px;
+    top: 10%;
+*/
+}
+#main{
+    background-color:#151515;
+    width: 98%;
+    text-align: left;
+    word-wrap: break-word;
+    position: absolute;
+    color: #FF00FF;
+    top:0pt;
+    left: 1%;
+    margin: auto;
+    padding-bottom: 2pt;
+}
+#innermain{
+    padding-left: 10px;
+}
+#navi{
+    background-color: #555555;
+    width: 100%;
+    color: #FFFFFF;
+    height: 80pt;
+    font-weight: bold;
+    overflow: auto;
+    padding-left: -10pt;
+    border: 0px solid #FFFFFF;
+    border-top: 8px solid #00FFFF;
+}
+#heading{
+    color: #00FFFF;
+    font-size: 25pt;
+    display:inline;
+}
+
+#knopp{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppdelete{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppedit{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppdownload{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+a{
+    color: #FF00FF;
+}
+#addknopp{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#knoppread{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#menuitem{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+#right{
+    text-align: right;
+}
+
+
+#info{
+    color: #555555;
+    font-size: 10pt;
+}
+
+h1 {
+    display:inline;
+    margin:0px;
+}
+h2 {
+    display:inline;
+    margin:0px;
+}
+h3 {
+    display:inline;
+    margin:0px;
+}
+h4 {
+    display:inline;
+    margin:0px;
+}
+h5 {
+    display:inline;
+    margin:0px;
+}
+h6 {
+    display:inline;
+    margin:0px;
+}
+#left{
+    text-align: left;
+}
+input[type=submit]{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+}
+input[type=file]{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #555555;
+    border-left: 2px solid #555555;
+    border-right: 2px solid #555555;
+    border-bottom: 2px solid #555555;
+    margin: 2pt;
+    line-height: 20pt;
+    letter-spacing: 2pt;
+}
+input[type=text]{
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#555555;
+    border: 1px solid white;
+    border-top: 2px solid #999999;
+    border-left: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-bottom: 2px solid #999999;
+    width: 160;
+}
+input[type=password]{
+    color:#55AA55;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 160;
+}
+textarea {
+    color:#55AA55;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:#FFFFFF;
+    border: 1px solid white;
+    border-top: 2px solid #66BB66;
+    border-left: 2px solid #66BB66;
+    border-right: 2px solid #88DD88;
+    border-bottom: 2px solid #88DD88;
+    width: 99%;
+    height: 200pt;
+    max-width: 99%;
+    border-radius: 5px 5px 5px 5px;
+}
+#content{
+    background-color:#FFFFFF;
+    width: 96.7%;
+    text-align: left;
+    padding-left: 1%; 
+    padding-right: 1%; 
+    word-wrap: break-word;
+    border: 1px solid lightgray;
+}
+#light{
+    background-color:#00FFFF;
+    height: 2px;
+    box-shadow: 1px 1px 10px 1px #00FFFF;
+
+}
+#hits a{
+    text-decoration: none;
+    text-shadow: 1px 0px 1px #000000;
+    font-weight: bold;
+/*
+    color:#FFFFFF;
+    text-decoration: none;
+    background-color:#5555FF;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid white;
+    border-top: 2px solid #DDDDFF;
+    border-left: 2px solid #DDDDFF;
+    border-right: 2px solid #9999BB;
+    border-bottom: 2px solid #9999BB;
+    line-height: 200%;
+*/
+}
+
+#foot{
+    text-align: left;
+    color: #777777;
+    font-weight: Bold;
+    font-size: 8pt;
+}

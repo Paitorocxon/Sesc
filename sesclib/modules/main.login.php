@@ -1,30 +1,4 @@
 ﻿
-  <style>
-    #draggable {
-        width: 400px;
-        height: 300px;
-        background-color: #FFFFDD;
-        margin: 0px;
-        box-shadow: 0px 1px 3px 0px #BBBBBB;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-    }
-    
-    #navi_login{
-        text-align: left;
-        background-color: #99EE99;
-        width: 100%;
-        color: #FFFFFF;
-        height: 40pt;
-        font-weight: bold;
-        overflow: auto;
-        padding-left: -10pt;
-        border: 0px solid #FFFFFF;
-        border-top: 8px solid #88DD88;
-        border-radius: 10px 10px 0px 0px;
-    }
-    
-  </style>
   <script src="jquery/jquery-1.12.4.js"></script>
   <script src="jquery/jquery-ui.js"></script>
   <script>
@@ -48,7 +22,15 @@
 $SU_Username='';
 $SU_Password='';
 
+
+
+
+
+
+
+
 class logining{
+    
     function isLoggedin(){
         if (isset($_REQUEST['logout'])){
                 logining::logout();
@@ -66,7 +48,25 @@ class logining{
             
     }
     function checklogin($name,$password){
-        if (trim($name) == 'pait' && trim($password) == 'germany1999'){
+    global $PDO;
+    $pdo = new PDO('mysql:host=localhost;dbname=sesc', $GLOBALS['DB_USERNAME'], $GLOBALS['DB_PASSWORD']);
+        
+
+    $sql="SELECT * FROM users WHERE username='$name' and password='$password'";
+
+       $IS_VALID = 0;
+       foreach ($pdo->query($sql) as $row) {
+           echo $row['username']."<br />";
+           echo $row['password']."<br />";
+           echo $row['admin']."<br /><br />";
+           if ($row['username'] == $name && $row['password'] == $password) {
+                $IS_VALID = 1;
+                $_SESSION['prev'] = $row['admin'];
+           }
+        }
+       
+        
+        if ($IS_VALID == 1){
             $_SESSION['username'] = $name;
             $_SESSION['password'] = $password;
             $_SESSION['dir'] = getcwd();
@@ -88,14 +88,14 @@ class logining{
         }
         #session_destroy();
                 die('<div id="draggable" class="ui-widget-content"><div id="navi_login">LOGIN</div><br>
-                <form action="">
+                <form action=""  method="POST">
                 Username<br><input type="text" name="username"><br><br>
                 Password<br><input type="password" name="password"><br>
                 <br>
                 <br>
                 <input type="submit" value="Login">
                 </form>
-                </div>'
+                <div id="foot">Sesc © 2017 Fabian Müller</div></div>'
                 );
     }
     function logout(){
@@ -113,3 +113,5 @@ class logining{
         die('<meta http-equiv="refresh" content="0; url=sesc.php" />');
     }
 }
+
+

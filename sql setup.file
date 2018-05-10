@@ -1,0 +1,20 @@
+CREATE USER 'sesc'@'localhost' IDENTIFIED BY 'sesc_masterpassword';
+GRANT ALL PRIVILEGES ON * . * TO 'sesc'@'localhost';
+FLUSH PRIVILEGES;
+
+
+CREATE DATABASE sesc;
+
+
+CREATE TABLE users (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
+admin INT(0),
+actions INT(0),
+log VARCHAR(100000)
+)
+
+
+INSERT INTO users (username, password, admin) VALUES ('admin', 'admin', 1);
+INSERT INTO users (username, password, admin) VALUES ('guest', '');

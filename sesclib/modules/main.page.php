@@ -1,4 +1,9 @@
-﻿<?php
+﻿  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+<?php
 /**
 *
 *   @title:     main.page
@@ -7,8 +12,6 @@
 *   @version:   1.5
 *   
 */
-
-
 
     function page($page){
         $LOG = new log();
@@ -20,6 +23,9 @@
             echo create();
         }elseif ($page == 'control'){
             echo control();
+        }elseif ($page == 'start'){
+            echo start();
+        
         }else{
                if (isset($_REQUEST['download'])){
                     header("Content-disposition: attachment; filename=" . urlencode($_REQUEST['download']) . "");
@@ -80,31 +86,35 @@
         }else{
         }
     } 
-    
     function help(){
         $LOG = new log();
             $LOG->write('[HELP]');
         return $GLOBALS['LangHelpText'];
     }
-    
     function about(){
         $LOG = new log();
             $LOG->write('[ABOUT]');
         return $GLOBALS['LangAboutText'];
     }
-    
     function control(){
         $LOG = new log();
             $LOG->write('[CONTROL]');
-        echo '	
-			 <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?page=control&action=upload" method="post">
-			 File: <input type="hidden" name="page" id="page" value="control"><input type="file" name="uploadfile" size="60" maxlength="255">
-			 <input type="Submit" name="Submit" value="Upload">
-			 </form>
-			 ';
+
     }
-    
     function create(){
         $LOG = new log();
         return $GLOBALS['LangControlText'];
+    }
+    function start(){
+        return '
+                <form name="uploadformular" enctype="multipart/form-data" action="sesc.php?page=control&action=upload" method="post">
+                    <label id="uploadlabel" class="UPLOADLABEL">
+                    <input type="file" required style="display:none" name="uploadfile"/>
+                    <span>Browse ...</span>
+                    <input type="hidden" name="page" id="page" value="control">
+                    </label>
+                    <input type="Submit" name="Submit" id="Upload" value="Upload">
+                </form>
+			 ';
+             
     }

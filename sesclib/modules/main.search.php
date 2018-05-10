@@ -41,7 +41,7 @@ class search{
             if ($_REQUEST['nav']=='..'){
                 $_SESSION['dir'] = dirname($_SESSION['dir'],1);
             } else {
-            $_SESSION['dir'] = $_SESSION['dir'] . '\\' . $_REQUEST['nav'];
+                $_SESSION['dir'] = $_SESSION['dir'] . '\\' . $_REQUEST['nav'];
             }
             die('<meta http-equiv="refresh" content="0; url=sesc.php?search=' . $_REQUEST['search'] . '" />');
         } elseif (!isset($_SESSION['dir'])) {
@@ -52,13 +52,12 @@ class search{
         
         $req = search::IsRequest();
         echo '<form>' .
-        '<input type="text" value="' . $req . '" id="search" name="search">' . 
-        '<input type="submit" value="' . $GLOBALS['LangSearch'] . '">' . 
+        '<input type="text" value="' . $req . '" id="search" name="search"  placeholder="Search">' . 
+        '<button type="submit" id="knoppsearch"><img src="images/search.png"></button> ' . 
         '</form>';
     }
     
     function searching($search){
-     
      $SearchArray[] = NULL;
         foreach(scandir($_SESSION['dir']) as $file){
             #if($file !== '.' AND $file !== '..'){

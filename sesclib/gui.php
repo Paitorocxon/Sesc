@@ -17,11 +17,11 @@ class gui{
         }
         function buttons($file,$search){
             return '
-             <a title="' . $GLOBALS['LangDelete'] . '" id="knoppdelete" href="sesc.php?m=' . $file . '&action=delete&search=' . $GLOBALS['SEARCHED'] . '">' . $GLOBALS['LangDelete'] . '</a>' . 
-            '<a id="knoppread" href="sesc.php?m=' . $file . '&action=read">' . $GLOBALS['LangRead'] . '</a>' . 
-            '<a id="knopp" href="' . $file . '">' . $GLOBALS['LangOpen'] . '</a>' .
-            '<a id="knoppedit" href="sesc.php?m=' . $file . '&action=edit">' . $GLOBALS['LangEdit'] . '</a>' .
-            '<a id="knoppdownload" href="sesc.php?download=' . $file . '">' . $GLOBALS['LangDownload'] . '</a>';
+             <a id="interaction" title="' . $GLOBALS['LangDelete'] . '" href="sesc.php?m=' . $file . '&action=delete&search=' . $GLOBALS['SEARCHED'] . '#delaction">' . '<img src="images/delete.png">' . '</a>' . 
+            '<a id="interaction" href="sesc.php?m=' . $file . '&action=read">' . '<img src="images/read.png">' . '</a>' . 
+            '<a id="interaction" href="' . $file . '">' . '<img src="images/open.png">' . '</a>' .
+            '<a id="interaction" href="sesc.php?m=' . $file . '&action=edit">' . '<img src="images/edit.png">' . '</a>' .
+            '<a id="interaction" href="sesc.php?download=' . $file . '">' . '<img src="images/download.png">' . '</a>';
         }
         function functions($file){
             return '
