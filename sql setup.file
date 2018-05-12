@@ -4,15 +4,15 @@ FLUSH PRIVILEGES;
 
 
 CREATE DATABASE sesc;
-
+connect sesc;
 
 CREATE TABLE users (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(255) NOT NULL,
-password VARCHAR(255) NOT NULL,
+password VARCHAR(64) NOT NULL,
 admin INT(0),
 actions INT(0),
-log VARCHAR(100000)
+log VARCHAR(100)
 )
 
 
