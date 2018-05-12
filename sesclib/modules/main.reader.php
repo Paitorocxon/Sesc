@@ -53,7 +53,12 @@ class reader{
                     } elseif ($READERz->endswith($_REQUEST['m'], ".tar")){
                         return "NOT ABLE TO READ!";
                     }else{
-                    $return = file_get_contents($_REQUEST['m']);
+                    $int=0;
+                    $filesubject=file_get_contents($_REQUEST['m']);
+                    foreach(preg_split("/((\r?\n)|(\r\n?))/", $filesubject) as $line){
+                        $int++;
+                    }
+                    $return = '<div class="readercontrol">' . gui::buttons($_REQUEST['m'],'') .'<h3>' . $_REQUEST['m'] . ' [' . $int . ' Lines]</h3></div><br><pre id="filecontent">' . file_get_contents($_REQUEST['m']) . '</pre><br><h>[' . $int . ' lines]';
                     return $return;
                         
                     }
@@ -102,8 +107,9 @@ class reader{
                 }else{
                     return '<a id="knopp" href="javascript:history.back()"> <-- </a> <font color=red> ' . 'DENIED' . '</font>';
                 }
-            }elseif ($action == 'edit'){
-                
+            }elseif ($action == 'read'){
+                  echo reader::read();
+            }elseif ($action == 'edit'){                
                 if ($_SESSION['prev'] > 0) {
                     $LOG = new log();
                     $WRITER = new writer();

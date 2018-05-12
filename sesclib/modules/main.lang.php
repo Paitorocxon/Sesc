@@ -28,6 +28,7 @@
     $LangControlText = '';
     $LangEdit = '';
     $LangSave = '';
+    $LangDownload = '';
 if ($LANG == 'de') {
     german();
 } elseif ($LANG == 'en') {

@@ -56,9 +56,6 @@ class logining{
 
        $IS_VALID = 0;
        foreach ($pdo->query($sql) as $row) {
-           echo $row['username']."<br />";
-           echo $row['password']."<br />";
-           echo $row['admin']."<br /><br />";
            if ($row['username'] == $name && $row['password'] == $password) {
                 $IS_VALID = 1;
                 $_SESSION['prev'] = $row['admin'];
