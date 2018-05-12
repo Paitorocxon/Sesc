@@ -8,5 +8,5 @@
 *   
 */
 $DB_USERNAME = 'sesc';
-$DB_PASSWORD = 'PASSWORD';
+$DB_PASSWORD = 'root';
 $DB_SERVER = 'localhost';

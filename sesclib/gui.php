@@ -18,10 +18,10 @@ class gui{
         function buttons($file,$search){
             return '
              <a id="interaction" title="' . $GLOBALS['LangDelete'] . '" href="sesc.php?m=' . $file . '&action=delete&search=' . $GLOBALS['SEARCHED'] . '#delaction">' . '<img src="images/delete.png">' . '</a>' . 
-            '<a id="interaction" href="sesc.php?m=' . $file . '&action=read">' . '<img src="images/read.png">' . '</a>' . 
-            '<a id="interaction" href="' . $file . '">' . '<img src="images/open.png">' . '</a>' .
-            '<a id="interaction" href="sesc.php?m=' . $file . '&action=edit">' . '<img src="images/edit.png">' . '</a>' .
-            '<a id="interaction" href="sesc.php?download=' . $file . '">' . '<img src="images/download.png">' . '</a>';
+            '<a id="interaction" title="' . $GLOBALS['LangRead'] . '" href="sesc.php?m=' . $file . '&action=read">' . '<img src="images/read.png">' . '</a>' . 
+            '<a id="interaction" title="' . $GLOBALS['LangOpen'] . '" href="' . $file . '">' . '<img src="images/open.png">' . '</a>' .
+            '<a id="interaction" title="' . $GLOBALS['LangEdit'] . '"href="sesc.php?m=' . $file . '&action=edit&typeof=Normal">' . '<img src="images/edit.png">' . '</a>' .
+            '<a id="interaction" title="' . $GLOBALS['LangDownload'] . '" href="sesc.php?download=' . $file . '">' . '<img src="images/download.png">' . '</a>';
         }
         function functions($file){
             return '
