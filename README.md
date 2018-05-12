@@ -1,39 +1,12 @@
-# Sesc
-Sesc - Search 'n Script
-~Inovation is where the ideas begin.
+## SeSc Update [Σxponentia] ☢
 
-Facebook: fb.me/paitoroc 
+Remember me to write a good readme!
+Enough for today, dude...
+I'm tired... i'm going to bed now...
 
-##  Installing Sesc
-███ ██ ███ ████ ███ █████ █████
-██████████ ██ ██ █████
- 1. ████████ ████████
- 2. ███ ██████████ ███ ██████████ ████ ████ █████████ █████ ███████████████ ███ ████████
- 3. ██████ ███ ████████████ ████ ███ █████ ███████████████████ ███ ██ ██████ ██████
-    ████ ██████████████████████████████ ███ ████ ███ ████████ ███ ████████ ██ ████ ███
- 4. ████ ███ ███████ ██ ████ ██████ ███ ████ ████ ████ ███████████████████████████
-    ██ ███ ███ ███ ████████████████ ██████████ ██ █████
-    
-    
-## Troubleshooting
-Error, security gaps or wished to paiorocxon@gmail.com
 
-## Future of Sesc
-+ Directory traveling
-+ sqlbased Login and user preveleges
-+ Better main.search.php module (i'll try to make it faster)
-+ Better performance
-- Temporary loginprocess (unsecure af)
 
-##  Changing the  Language
 
-#### head to the modules folder and open the module 'main.lang.php'
-Path:
-###### 'sesclib/modules/main.lang.php'
-AVAILABLE LANGUAGES: ENGLISH|GERMAN
-Change the $LANG variable to your country short.
-German=de
-English=en
 
-I will add more soon
-Note: Help with translating it to your Language!
+
+oh boy... My bed is so fluffy...
